@@ -22,9 +22,7 @@ export default function Home() {
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>
 			<HomepageHeader />
-			<main>
-				<HomepageFeatures />
-			</main>
+			<main>{/* <HomepageFeatures /> */}</main>
 		</Layout>
 	);
 }
