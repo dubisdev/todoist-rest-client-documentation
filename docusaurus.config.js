@@ -24,14 +24,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 						sidebarPath: require.resolve("./sidebars.js"),
 						// Please change this to your repo.
 						editUrl:
-							"https://github.com/dubisdev/todoist-rest-client/edit/main/website/",
+							"https://github.com/dubisdev/todoist-rest-client-documentation/edit/master/",
 					},
 					blog: false,
 					// {
 					// 	showReadingTime: true,
 					// 	// Please change this to your repo.
 					// 	editUrl:
-					// 		"https://github.com/dubisdev/todoist-rest-client/edit/main/website/blog/",
+					// 		"https://github.com/dubisdev/todoist-rest-client/edit/master/website/blog/",
 					// },
 					theme: {
 						customCss: require.resolve("./src/css/custom.css"),
@@ -90,7 +90,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 							],
 						},
 					],
-					copyright: `Copyright © ${new Date().getFullYear()} Todoist-Rest-Client. Built with Docusaurus.`,
+					copyright: `JS Todoist-Rest-Client. Built with ❤ & Docusaurus`,
 				},
 				prism: {
 					theme: lightCodeTheme,
