@@ -2,42 +2,70 @@
 sidebar_position: 2
 ---
 
-# Creating a Task
+# Working with Tasks
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+## Create tasks
 
-- `src/pages/index.js` -> `localhost:3000/`
-- `src/pages/foo.md` -> `localhost:3000/foo`
-- `src/pages/foo/bar.js` -> `localhost:3000/foo/bar`
+### Create tasks locally
 
-## Create your first React Page
+```js
+import { Task } from "todoist-rest-client";
 
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from "react";
-import Layout from "@theme/Layout";
-
-export default function MyReactPage() {
-	return (
-		<Layout>
-			<h1>My React page</h1>
-			<p>This is a React page</p>
-		</Layout>
-	);
-}
+let myTask = new Task({ content: "Task name" });
 ```
 
-A new page is now available at `http://localhost:3000/my-react-page`.
+### Create tasks in the Todoist Account
 
-## Create your first Markdown Page
+```js
+const myClient // an authorized client instance
 
-Create a file at `src/pages/my-markdown-page.md`:
+let myTask... // a valid task JSON Object
 
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
+myClient.task.create(myTask) // Creates the task in the Todoist Servers
 ```
 
-A new page is now available at `http://localhost:3000/my-markdown-page`.
+## Get tasks from the server
+
+### getAll
+
+```js
+const myClient // an authorized client instance
+
+myClient.task.getAll().then(res => console.log(res)) // ["task1 content", "task2 content", ...]
+```
+
+### getAllJSON
+
+```js
+const myClient // an authorized client instance
+
+myClient.task.getAllJSON().then(res => console.log(res)) // [{task1...}, {task2...}, ...]
+```
+
+## Get Tasks for today
+
+### getTodayTasks
+
+```js
+const myClient // an authorized client instance
+
+myClient.task.getToday().then(res => console.log(res)) // ["task1 content", "task2 content", ...]
+```
+
+### getTodayTasksJSON
+
+```js
+const myClient // an authorized client instance
+
+myClient.task.getTodayJSON().then(res => console.log(res)) // [{task1...}, {task2...}, ...]
+```
+
+## Search tasks
+
+### get(string: id)
+
+```js
+const myClient // an authorized client instance
+
+myClient.task.get("valid_id").then(res => console.log(res)) // {task object}
+```
