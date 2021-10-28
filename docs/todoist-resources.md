@@ -8,7 +8,7 @@ We call "Todoist Resources" to all the Todoist elements that can be managed thro
 
 🗒 Projects <br/>
 🗒 Sections <br/>
-🗒 [<strong>Tasks</strong>](/docs/Tasks/tasks-objects) <br/>
+🗒 [<strong>Tasks</strong>](/docs/Tasks/tasks-objects/) <br/>
 🗒 Comments <br/>
 🗒 Labels <br/>
 
