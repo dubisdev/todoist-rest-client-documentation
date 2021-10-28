@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 		tagline: "Documentation Page",
 		url: "https://dubisdev.github.io",
 		baseUrl: "/todoist-rest-client/",
-		onBrokenLinks: "throw",
+		onBrokenLinks: "warn",
 		onBrokenMarkdownLinks: "warn",
 		favicon: "img/favicon.ico",
 		organizationName: "dubisdev", // Usually your GitHub org/user name.
